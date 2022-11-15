@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title> PET-Template</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="center">
+    <header>
+        <div class="logo">
+            <img src="./Logobanner.png" style="max-width: 171px; max-height: 59px; position: relative; top: 2px;">
+        </div>
+        <div class="tab">
+          <div class="myName">Home</div>
+          <div class="myName">About</div>
+          <div class="myName">Projects</div>
+          <div class="myName">Shop</div>
+          <div class="myName">Contact</div>
+        </div>
+        <div class="nav">|||</div>
+      </header>
+      <div class="tab1">
+        <div class="myName t1">Home</div>
+        <div class="myName t1">About</div>
+        <div class="myName t1">Projects</div>
+        <div class="myName t1">Shop</div>
+        <div class="myName t1">Contact</div>
+      </div>
+        <!-- <div class="social-buttons">
+            <div class="social">
+                <div class="fa fa-wechat"></div>
+            </div>
+            <div class="social">
+                <div class="fa fa-weibo"></div>
+            </div>
+            <div class="social">
+                <div class="fa fa-paw"></div>
+            </div>
+        </div> -->
+        <ul class="menu">
+            <div class= "toggle"><ion-icon name="add" class="icon-rotate"></ion-icon></div>
+            <li style="--i:0;--clr:#ff2972;">
+                <a href="#" style="background-color: rgba(58, 58, 58, 0.824);">
+                    <ion-icon name="home" class="icon-rotate"></ion-icon>
+                </a>
+            </li>
+            <li style="--i:1;--clr:#fee800;">
+                <a href="#" style="background-color: rgba(58, 58, 58, 0.824);">
+                    <ion-icon name="logo-twitter" class="icon-rotate"></ion-icon>
+                </a>
+            </li>
+            <li style="--i:2;--clr:#04fc43;">
+                <a href="#" style="background-color: rgba(58, 58, 58, 0.824);">
+                    <ion-icon name="person" class="icon-rotate"></ion-icon>
+                </a>
+            </li>
+            <li style="--i:3;--clr:#fe00f1;">
+                 <a href="#" style="background-color: rgba(58, 58, 58, 0.824);">
+                    <ion-icon name="logo-instagram" class="icon-rotate"></ion-icon>
+                </a>
+            </li>
+            <li style="--i:4;--clr:#00b0fe;">
+                <a href="#" style="background-color: rgba(58, 58, 58, 0.824);">
+                    <ion-icon name="logo-facebook" class="icon-rotate"></ion-icon>
+                </a>
+            </li>
+        </ul >
+</div>
+<div class="center-left">
+    <img src="./Logobanner.png">
+    <p>MAKING THE CITY A DOG FRIENDLY PLACE</p>
+    <div class="container">
+        <div class="btn"><a href="#">LEARN MORE</a></div>
+        <div class="btn"><a href="#" id="staticbutton">CONTACT US</a></div>
+    </div>
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js'></script><script  src="index.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script>
+      let toggle = document.querySelector('.toggle')
+      let menu = document.querySelector('.menu')
+      toggle.onclick = function(){
+          menu.classList.toggle('active')
+      }
+      const $ = document;
+let menu1 = $.getElementsByClassName("tab")[0];
+let menu2 = $.getElementsByClassName("tab1")[0];
+let logo = $.getElementsByClassName("nav")[0];
+
+// show and hide menu
+logo.addEventListener("click", () => {
+  menu2.classList.toggle("active1");
+});
+
+// close menu if width is more than 569
+window.addEventListener("resize", () => {
+  let x = window.innerWidth;
+  if (x >= 1000) {
+    menu2.classList.remove("active1");
+  }
+});
+  </script>
+</body>
+</html>
